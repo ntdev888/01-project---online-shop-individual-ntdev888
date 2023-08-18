@@ -1,0 +1,13 @@
+.navbar {
+  display: grid;
+}
+
+.barstart {
+  display: grid;
+  justify-self: start;
+}
+
+.nav-logo {
+  height: 1.875 rem;
+  width: auto;
+}
