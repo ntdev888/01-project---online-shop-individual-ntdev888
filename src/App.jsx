@@ -1,5 +1,6 @@
 import { React, useEffect, useState } from "react";
 import Navbar from "./components/navbar";
+import Hero from "./components/hero";
 import "./App.css";
 
 // The function that makes the fetch request to the Products API
@@ -22,6 +23,7 @@ function App() {
   return (
     <div className="container">
       <Navbar />
+      <Hero />
     </div>
   );
 }

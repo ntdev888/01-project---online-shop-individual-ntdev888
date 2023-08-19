@@ -1,13 +1,51 @@
-.navbar {
-  display: grid;
+p {
+  align-self: center;
 }
 
-.barstart {
+#root {
+  padding: 0;
+  margin: 0;
+}
+
+.hero {
+  height: 33%;
+  overflow: hidden;
+  right: 5rem;
+}
+
+.hero-imgs {
+  width: 100%;
+  height: 33%;
+  animation: fadeIn 2s;
+  position: relative;
+}
+
+.navbar {
   display: grid;
-  justify-self: start;
+  grid-template-columns: 1fr 1fr;
+}
+
+.bar-start {
+  display: inline-grid;
+  justify-self: auto;
+  grid-template-columns: 1fr 1fr;
+}
+
+.bar-end {
+  justify-self: end;
+  align-self: center;
 }
 
 .nav-logo {
-  height: 1.875 rem;
+  max-height: 6rem;
   width: auto;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
