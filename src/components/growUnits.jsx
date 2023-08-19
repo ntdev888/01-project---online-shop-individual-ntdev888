@@ -2,29 +2,27 @@ import React, { useState } from "react";
 
 function GrowUnit({ imgSrc, title, price, buyLink }) {
   return (
-    <div className="growunit">
+    <div className="grow-unit">
       <img src={imgSrc} alt="picture of grow unit" />
       <p>{title}</p>
       <p>{price}</p>
-      <button href={buyLink}></button>
+      <button href={buyLink}>Buy Now</button>
     </div>
   );
 }
 
-function GrowUnits() {
-  const [currentUnit, setUnit] = setState(growUnits[0]);
-
-  const clickUnit = () => {};
+function GrowUnits({ products }) {
+  const units = products.filter((prod) => prod.metadata.type === "unit");
 
   return (
-    <div>
-      {growUnits.map((unit) => (
+    <div className="grow-units">
+      {units.map((product, index) => (
         <GrowUnit
-          id={unit.id}
-          imgSrc={unit.imgSrc}
-          title={unit.title}
-          price={unit.price}
-          buyLink={unit.url}
+          key={index}
+          imgSrc={product.images[0]}
+          title={product.name}
+          price={product.prices["0"].unit_amount}
+          buyLink={product.url}
         />
       ))}
     </div>
