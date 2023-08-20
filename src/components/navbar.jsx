@@ -10,10 +10,14 @@ function Navbar() {
           src="./imgs/EvaGrowLogo.png"
           alt="EvaGrow Logo"
         />
-        <p>Testing 123</p>
+        <p>
+          <a href="#growunits">Grow Units</a>
+        </p>
       </div>
       <div className="bar-end">
-        <p>Stuff in here</p>
+        <p>
+          <a href="#accessories">Accessories</a>
+        </p>
       </div>
     </div>
   );

@@ -16,7 +16,6 @@ function App() {
   const [mainUnit, setMainUnit] = useState([]);
 
   const changeDisplayUnit = (unitSelected) => {
-    console.log(unitSelected);
     setMainUnit(unitSelected);
   };
 

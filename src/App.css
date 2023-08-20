@@ -4,9 +4,16 @@ body {
   height: 100%;
   margin: 0;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Varela Round", sans-serif;
-  background-image: url("public/imgs/background2.png");
+  /* background-image: url("public/imgs/background2.png"); */
+  background-color: #3a5a40;
+  color: #344e41;
 }
 
 p {
@@ -16,12 +23,19 @@ p {
   text-align: center;
 }
 
+button {
+  border: 0rem;
+  border-radius: 1rem;
+  background-color: #a3b18a;
+}
+
 #root {
   padding: 0;
   margin: 0;
 }
 
 .navbar {
+  background-color: #dad7cd;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -62,20 +76,24 @@ p {
 }
 
 .grow-unit {
+  border-radius: 1rem;
   display: grid;
   justify-content: center;
   margin: 0.2rem;
-  background-color: rgb(248, 235, 191);
+  background-color: #dad7cd;
+  box-shadow: 0.5rem 0.5rem 1rem #344e41;
 }
 
 .grow-unit img {
+  border-radius: 1rem;
   max-width: 100%;
   max-height: auto;
 }
 
 .hero-grow-unit {
+  border-radius: 1rem;
   margin: 0.2rem;
-  background-color: rgb(248, 235, 191);
+  background-color: #dad7cd;
   display: grid;
   height: 33%;
   overflow: hidden;
@@ -83,6 +101,7 @@ p {
 }
 
 .hero-grow-unit img {
+  border-radius: 1rem;
   max-width: 100%;
   max-height: auto;
 }
@@ -104,13 +123,15 @@ p {
 }
 
 .accessory {
+  border-radius: 1rem;
   display: grid;
   justify-content: center;
   margin: 0.2rem;
-  background-color: rgb(248, 235, 191);
+  background-color: #dad7cd;
 }
 
 .accessory img {
+  border-radius: 1rem;
   max-width: 100%;
   max-height: auto;
 }

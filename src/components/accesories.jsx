@@ -15,9 +15,9 @@ function Accessories({ products }) {
   const accessory = products.filter(
     (prod) => prod.metadata.type === "accessory"
   );
-  console.log(accessory);
+  console.log("Accessories working");
   return (
-    <div className="accessories">
+    <div id="accessories" className="accessories">
       {accessory.map((product, index) => (
         <Accessory
           key={index}

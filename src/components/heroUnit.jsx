@@ -1,7 +1,7 @@
 import React from "react";
 
 function HeroUnit({ displayUnit }) {
-  console.log("I am working");
+  console.log("HeroUnit working");
   return (
     <div className="hero-grow-unit">
       <img src={displayUnit.images[0]} alt="picture of grow unit" />

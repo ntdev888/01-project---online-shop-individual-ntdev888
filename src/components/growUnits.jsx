@@ -20,9 +20,9 @@ function GrowUnit({
 
 function GrowUnits({ products, changeDisplayUnit }) {
   const units = products.filter((prod) => prod.metadata.type === "unit");
-
+  console.log("GrowUnits working");
   return (
-    <div className="grow-units">
+    <div id="growunits" className="grow-units">
       {units.map((product, index) => (
         <GrowUnit
           key={index}
