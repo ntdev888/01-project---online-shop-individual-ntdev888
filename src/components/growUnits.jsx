@@ -9,7 +9,6 @@ function GrowUnit({
   changeDisplayUnit,
   checkout,
 }) {
-  console.log(buyLink);
   return (
     <div className="grow-unit">
       <img

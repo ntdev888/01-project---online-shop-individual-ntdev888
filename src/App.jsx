@@ -7,15 +7,13 @@ import Accessories from "./components/accesories";
 import "./App.css";
 import { checkout } from "./services/checkout";
 
-// The function that makes the fetch request to the Products API
 import { getProducts } from "./services/getProducts";
 
 function App() {
-  // use the products variable to read all of your products
-  // and display them on your page
   const [products, setProducts] = useState([]);
   const [mainUnit, setMainUnit] = useState([]);
 
+  //Hero unit function to return state
   const changeDisplayUnit = (unitSelected) => {
     setMainUnit(unitSelected);
   };
@@ -24,6 +22,7 @@ function App() {
     const loadData = async () => {
       const products = await getProducts();
       setProducts(products);
+      console.log("API Loaded");
       setMainUnit(products[11]);
     };
 
