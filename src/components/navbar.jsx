@@ -13,11 +13,12 @@ function Navbar() {
         <p>
           <a href="#growunits">Grow Units</a>
         </p>
-      </div>
-      <div className="bar-end">
         <p>
           <a href="#accessories">Accessories</a>
         </p>
+      </div>
+      <div className="bar-end">
+        <p>inc 2019</p>
       </div>
     </div>
   );

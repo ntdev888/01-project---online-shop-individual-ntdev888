@@ -10,6 +10,7 @@ html {
 }
 
 body {
+  font-size: 0.8rem;
   font-family: "Varela Round", sans-serif;
   /* background-image: url("public/imgs/background2.png"); */
   background-color: #3a5a40;
@@ -23,15 +24,16 @@ p {
   text-align: center;
 }
 
+h3 {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
 button {
+  height: 1.5rem;
   border: 0rem;
   border-radius: 1rem;
   background-color: #a3b18a;
-}
-
-#root {
-  padding: 0;
-  margin: 0;
 }
 
 .navbar {
@@ -43,7 +45,7 @@ button {
 .bar-start {
   display: inline-grid;
   justify-self: auto;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .bar-end {
@@ -79,9 +81,9 @@ button {
   border-radius: 1rem;
   display: grid;
   justify-content: center;
-  margin: 0.2rem;
+  margin: 0.3rem;
   background-color: #dad7cd;
-  box-shadow: 0.5rem 0.5rem 1rem #344e41;
+  box-shadow: 0.5rem 0.5rem 1rem black;
 }
 
 .grow-unit img {
@@ -98,6 +100,7 @@ button {
   height: 33%;
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
+  box-shadow: 0.5rem 0.5rem 1rem black;
 }
 
 .hero-grow-unit img {
@@ -108,7 +111,8 @@ button {
 
 .text-box {
   display: grid;
-  justify-content: center;
+  align-self: flex-end;
+  flex-grow: 1;
 }
 
 .description {
@@ -118,20 +122,50 @@ button {
 .accessories {
   height: 33%;
   padding: 0.1rem;
-  display: inline-grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  margin: 0.3rem;
+  grid-template-columns: 1fr 1fr;
 }
 
 .accessory {
+  height: auto;
   border-radius: 1rem;
   display: grid;
   justify-content: center;
+  grid-template-rows: 1fr 1fr;
   margin: 0.2rem;
   background-color: #dad7cd;
+  box-shadow: 0.5rem 0.5rem 1rem black;
 }
 
 .accessory img {
   border-radius: 1rem;
   max-width: 100%;
   max-height: auto;
+}
+
+@media (min-width: 740px) {
+  body {
+    font-size: 1.4rem;
+  }
+
+  button {
+    height: 2.5rem;
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  .accessory {
+    margin: 0.5rem;
+  }
+  .accessories {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .description {
+    font-size: 1.4rem;
+  }
 }

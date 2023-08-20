@@ -7,18 +7,24 @@ function GrowUnit({
   price,
   buyLink,
   changeDisplayUnit,
+  checkout,
 }) {
+  console.log(buyLink);
   return (
-    <div className="grow-unit" onClick={() => changeDisplayUnit(product)}>
-      <img src={imgSrc} alt="picture of grow unit" />
-      <p>{title}</p>
+    <div className="grow-unit">
+      <img
+        src={imgSrc}
+        alt="picture of grow unit"
+        onClick={() => changeDisplayUnit(product)}
+      />
+      <h3>{title}</h3>
       <p>${price / 100}.00</p>
-      <button href={buyLink}>Buy Now</button>
+      <button onClick={() => checkout(buyLink)}>Buy Now</button>
     </div>
   );
 }
 
-function GrowUnits({ products, changeDisplayUnit }) {
+function GrowUnits({ products, changeDisplayUnit, checkout }) {
   const units = products.filter((prod) => prod.metadata.type === "unit");
   console.log("GrowUnits working");
   return (
@@ -30,8 +36,9 @@ function GrowUnits({ products, changeDisplayUnit }) {
           imgSrc={product.images[0]}
           title={product.name}
           price={product.prices["0"].unit_amount}
-          buyLink={product.url}
+          buyLink={product.prices["0"].id}
           changeDisplayUnit={changeDisplayUnit}
+          checkout={checkout}
         />
       ))}
     </div>

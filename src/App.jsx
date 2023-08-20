@@ -5,6 +5,7 @@ import GrowUnits from "./components/growUnits";
 import HeroUnit from "./components/heroUnit";
 import Accessories from "./components/accesories";
 import "./App.css";
+import { checkout } from "./services/checkout";
 
 // The function that makes the fetch request to the Products API
 import { getProducts } from "./services/getProducts";
@@ -33,9 +34,13 @@ function App() {
     <div className="container">
       <Navbar />
       <Hero />
-      <GrowUnits products={products} changeDisplayUnit={changeDisplayUnit} />
+      <GrowUnits
+        checkout={checkout}
+        products={products}
+        changeDisplayUnit={changeDisplayUnit}
+      />
       {mainUnit.length === 0 ? null : <HeroUnit displayUnit={mainUnit} />}
-      <Accessories products={products} />
+      <Accessories checkout={checkout} products={products} />
     </div>
   );
 }
