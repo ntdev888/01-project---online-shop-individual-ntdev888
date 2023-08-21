@@ -12,7 +12,6 @@ html {
 body {
   font-size: 0.8rem;
   font-family: "Varela Round", sans-serif;
-  /* background-image: url("public/imgs/background2.png"); */
   background-color: #3a5a40;
   color: #344e41;
 }
@@ -34,10 +33,6 @@ button {
   border: 0rem;
   border-radius: 1rem;
   background-color: #a3b18a;
-}
-
-.root {
-  text-align: center;
 }
 
 .container {
@@ -132,7 +127,8 @@ button {
   height: auto;
   display: grid;
   align-self: flex-end;
-  align-content: stretch;
+  align-items: stretch;
+  justify-items: stretch;
 }
 
 .description {
@@ -175,6 +171,7 @@ button {
   h3 {
     font-size: 1.4rem;
   }
+
   .navbar {
     margin-top: 1rem;
     border-radius: 1rem 1rem 0rem 0rem;

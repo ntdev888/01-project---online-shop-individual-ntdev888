@@ -7,9 +7,11 @@ function Accessory({ imgSrc, title, price, buyLink, checkout, description }) {
         <img src={imgSrc} alt="picture of grow unit" />
       </div>
       <div className="text-box">
-        <h3>{title}</h3>
-        <p className="description">{description}</p>
-        <p>${price / 100}.00</p>
+        <div className="text">
+          <h3>{title}</h3>
+          <p className="description">{description}</p>
+          <p>${price / 100}.00</p>
+        </div>
         <button onClick={() => checkout(buyLink)}>Buy Now</button>
       </div>
     </div>
