@@ -36,6 +36,16 @@ button {
   background-color: #a3b18a;
 }
 
+.root {
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 48rem;
+  display: grid;
+}
+
 .navbar {
   background-color: #dad7cd;
   display: grid;
@@ -58,20 +68,29 @@ button {
   width: auto;
 }
 
+.loading {
+  display: grid;
+  justify-items: center;
+}
+
+.loading-image img {
+  align-self: center;
+  width: 10px;
+  height: auto;
+}
+
 .hero {
-  height: 33%;
-  overflow: hidden;
   right: 5rem;
 }
 
 .hero-imgs {
   width: 100%;
-  max-height: 33%;
+  height: auto;
   position: relative;
 }
 
 .grow-units {
-  height: 33%;
+  height: auto;
   padding: 0.1rem;
   display: inline-grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -97,7 +116,7 @@ button {
   margin: 0.2rem;
   background-color: #dad7cd;
   display: grid;
-  height: 33%;
+  height: auto;
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
   box-shadow: 0.5rem 0.5rem 1rem black;
@@ -110,9 +129,10 @@ button {
 }
 
 .text-box {
+  height: auto;
   display: grid;
   align-self: flex-end;
-  flex-grow: 1;
+  align-content: stretch;
 }
 
 .description {
@@ -128,11 +148,9 @@ button {
 }
 
 .accessory {
-  height: auto;
   border-radius: 1rem;
   display: grid;
-  justify-content: center;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto auto;
   margin: 0.2rem;
   background-color: #dad7cd;
   box-shadow: 0.5rem 0.5rem 1rem black;
@@ -144,7 +162,7 @@ button {
   max-height: auto;
 }
 
-@media (min-width: 740px) {
+@media screen and (min-width: 48rem) {
   body {
     font-size: 1.4rem;
   }
@@ -155,17 +173,23 @@ button {
   }
 
   h3 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+  }
+  .navbar {
+    margin-top: 1rem;
+    border-radius: 1rem 1rem 0rem 0rem;
   }
 
   .accessory {
+    max-height: auto;
     margin: 0.5rem;
   }
+
   .accessories {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
   .description {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
 }

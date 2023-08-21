@@ -4,6 +4,7 @@ import Hero from "./components/hero";
 import GrowUnits from "./components/growUnits";
 import HeroUnit from "./components/heroUnit";
 import Accessories from "./components/accesories";
+import Loading from "./components/loading";
 import "./App.css";
 import { checkout } from "./services/checkout";
 
@@ -38,7 +39,11 @@ function App() {
         products={products}
         changeDisplayUnit={changeDisplayUnit}
       />
-      {mainUnit.length === 0 ? null : <HeroUnit displayUnit={mainUnit} />}
+      {mainUnit.length === 0 ? (
+        <Loading />
+      ) : (
+        <HeroUnit displayUnit={mainUnit} />
+      )}
       <Accessories checkout={checkout} products={products} />
     </div>
   );
