@@ -7,7 +7,7 @@ function Loading() {
         className="loading-img"
         height="80rem"
         width="auto"
-        src="public/loading.gif"
+        src="./loading.gif"
         alt="eh"
       />
     </div>
