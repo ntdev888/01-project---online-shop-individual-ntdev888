@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 
 const heroImgs = [
-  "public/hero_imgs/3SQobyog.jpeg",
-  "public/hero_imgs/7nu0dyps.jpeg",
-  "public/hero_imgs/FyJzXenT.png",
-  "public/hero_imgs/hQT3AiHw.jpeg",
-  "public/hero_imgs/HSm6UHnC.jpeg",
-  "public/hero_imgs/QbvkaRtA.jpeg",
-  "public/hero_imgs/VoH_iD7A.jpeg",
+  "hero_imgs/3SQobyog.jpeg",
+  "hero_imgs/7nu0dyps.jpeg",
+  "hero_imgs/FyJzXenT.png",
+  "hero_imgs/hQT3AiHw.jpeg",
+  "hero_imgs/HSm6UHnC.jpeg",
+  "hero_imgs/QbvkaRtA.jpeg",
+  "hero_imgs/VoH_iD7A.jpeg",
 ];
 
 function Hero() {
